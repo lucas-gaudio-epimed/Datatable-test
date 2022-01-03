@@ -1,0 +1,412 @@
+/* --------------------------------------
+Variáveis globais 
+*/
+/* Ensure that the demo table scrolls */
+th,
+td {
+  white-space: nowrap;
+}
+div.dataTables_wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+tr.odd td:first-child,
+tr.even td:first-child {
+  padding-left: 4em;
+}
+
+.first_th {
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #00aace;
+}
+/* --------------------------------------
+Panel da tabela
+*/
+#antimicrobial-table__wrapper {
+  margin-top: 55px;
+}
+
+/* .antimicrobial-doses__table-cells-header {
+  background-color: #2c99d7;
+} */
+
+#antimicrobial-doses__panel {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  position: relative;
+  top: -35px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #principal {
+    /* Enter your style code */
+    border-collapse: separate;
+  }
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    padding: 5px 2.5px 10px;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-header::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #00aace;
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    position: relative;
+    left: -5px;
+  }
+}
+/* --------------------------------------
+Header das Tabelas
+*/
+#antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  color: #666666;
+  padding: 5px 2.5px 10px;
+}
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-header-row
+  .antimicrobial-doses__table-cells-header
+  .antimicrobial-doses__table-cells-help-icon {
+  font-size: 1.2em;
+  color: #55b3db;
+  cursor: help;
+}
+
+#antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header-patients {
+  color: #2c99d7;
+  font-weight: bold;
+}
+
+#antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header-days-of-use {
+  color: #2f2b60;
+  font-weight: bold;
+}
+
+/* --------------------------------------
+Tabelas Classes de Antimicrobianos
+*/
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-header {
+  color: #666666;
+  font-size: 16px; /* 14px */
+  margin: auto 20px;
+  padding-top: 10px;
+}
+
+/* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	#filter-summary__wrapper .filter-summary__list {
+		max-width: 95vw;
+	}
+} */
+/* IE9, IE10, IE11 */
+/* @media screen and (min-width: 0\0) {
+	#filter-summary__wrapper .filter-summary__list {
+		max-width: 95vw;
+	}
+} */
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-header::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: #00aace;
+  border-radius: 30px;
+  display: inline-block;
+  margin-right: 15px;
+  text-align: center;
+}
+
+/* --------------------------------------
+Tabelas Antimicrobianos
+*/
+
+#antimicrobial-doses__panel .antimicrobial-doses__table {
+  width: 100%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#antimicrobial-doses__panel .antimicrobial-doses__table.antimicrobial-doses__table-half {
+  width: 50%;
+}
+
+#antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-body .antimicrobial-doses__table-body-line-row {
+  position: relative;
+  left: 5;
+}
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-line {
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: middle; /* top */
+  border-bottom: 1px solid #ddd;
+}
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-line-name {
+  text-align: left;
+  padding: 8px 20px;
+  /* border-left: 1px dashed #00AACE; */
+  background: url(./../../images/border-dashed.png) no-repeat 0px 2px;
+}
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-line-patients {
+  color: #2c99d7;
+  font-weight: bold;
+}
+
+#antimicrobial-doses__panel
+  .antimicrobial-doses__table
+  .antimicrobial-doses__table-body
+  .antimicrobial-doses__table-body-row
+  .antimicrobial-doses__table-body-line-days-of-use {
+  color: #2f2b60;
+  font-weight: bold;
+}
+
+@media only screen {
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+/* --------------------------------------
+Responsividade - Extra small devices Phones (<768px)
+*/
+@media only screen and (max-width: 767px) {
+  #antimicrobial-doses__panel .antimicrobial-doses__table {
+    padding: 0;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table.antimicrobial-doses__table-half {
+    width: 100%;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-header {
+    font-size: 14px;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    font-size: 12px;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-header-row
+    .antimicrobial-doses__table-cells-header
+    .antimicrobial-doses__table-cells-help-icon {
+    font-size: 1em;
+  }
+
+  #antimicrobial-doses__table--two .antimicrobial-doses__table-header {
+    display: none;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-line-name {
+    width: 50%;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table td {
+    min-width: 50px;
+  }
+}
+
+/* --------------------------------------
+Responsividade - Small devices Tablets (≥768px)
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #antimicrobial-doses__panel .antimicrobial-doses__table.antimicrobial-doses__table-half {
+    width: 100%;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    font-size: 13px;
+  }
+
+  #antimicrobial-doses__table--two .antimicrobial-doses__table-header {
+    display: none;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-line-name {
+    width: 35%;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table td {
+    min-width: 50px;
+  }
+}
+
+/* --------------------------------------
+Responsividade - Medium devices Desktops (≥992px)
+*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* --------------------------------------
+Responsividade - Large devices Desktops (≥1200px)
+*/
+@media only screen and (min-width: 1200px) {
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    padding: 5px 2.5px 10px;
+  }
+}
+
+/* --------------------------------------
+Responsividade - Impressão
+*/
+@media print {
+  table {
+    page-break-after: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+    height: auto;
+  }
+
+  td {
+    page-break-inside: avoid;
+    page-break-after: auto;
+    height: auto;
+  }
+
+  thead {
+    display: table-header-group;
+    height: auto;
+  }
+
+  tfoot {
+    display: table-footer-group;
+    height: auto;
+  }
+
+  #antimicrobial-doses__panel .panel-body,
+  .antimicrobial-doses__table {
+    padding: 0;
+  }
+
+  #antimicrobial-doses__table--two .antimicrobial-doses__table-header {
+    display: none;
+  }
+
+  .antimicrobial-doses__table-half {
+    float: left;
+    width: 100% !important;
+    padding: 15px;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-header {
+    font-size: 14px;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-header::before {
+    width: 0;
+    display: none;
+  }
+
+  #antimicrobial-doses__panel
+    .antimicrobial-doses__table
+    .antimicrobial-doses__table-body
+    .antimicrobial-doses__table-body-row
+    .antimicrobial-doses__table-body-line {
+    padding: 4px 20px;
+  }
+
+  .antimicrobial-doses__table {
+    page-break-inside: auto;
+  }
+
+  .filter-summary__pill-content {
+    font-weight: 400;
+  }
+
+  .antimicrobial-doses__table-header {
+    display: contents;
+  }
+
+  #antimicrobial-doses__panel .antimicrobial-doses__table .antimicrobial-doses__table-header-row .antimicrobial-doses__table-cells-header {
+    font-size: 12px;
+  }
+
+  #filter-summary__wrapper {
+    margin-bottom: 55px;
+  }
+
+  #page__search-results-indicators-wrapper {
+    border-top: 0;
+  }
+
+  .totalizer__indicators-item-description {
+    font-weight: 400;
+  }
+}
+
+/* --------------------------------------
+Compatibilidade - IE 10+
+*/

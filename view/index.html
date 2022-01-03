@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link href="../css/index.css" rel="stylesheet" type="text/css" media="screen">
+
+  <script src="../js/index.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.11.3/fc-4.0.1/rg-1.1.4/datatables.css"/>
+ 
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.11.3/fc-4.0.1/rg-1.1.4/datatables.js"></script>
+
+  <title>Document</title>
+</head>
+<body>  
+  <div id="antimicrobial-table__wrapper">
+    <div class="panel panel-default" id="antimicrobial-doses__panel">
+        <div class="panel-body">
+          <table class="display nowrap table antimicrobial-doses__table stripe row-border order-column" id="antimicrobial-doses__table--one" style="width:100%">
+            <thead class="antimicrobial-doses__table-header">
+
+              <tr class="antimicrobial-doses__table-header-row">
+                <th class="antimicrobial-doses__table-cells-header">Antimicrobianos</th>
+
+                  <th class="antimicrobial-doses__table-cells-header antimicrobial-doses__table-cells-header-patients">Bactérias Gram-Positivos</th>
+
+                  <th class="antimicrobial-doses__table-cells-header">
+                      Patients
+                  </th>
+
+                  <th class="antimicrobial-doses__table-cells-header antimicrobial-doses__table-cells-header-days-of-use">
+                      Use days (n)
+                  </th>
+
+                  <th class="antimicrobial-doses__table-cells-header">
+                      Total dose (g)
+                  </th>
+
+                  <th class="antimicrobial-doses__table-cells-header">
+                      DDD
+                      <i class="fa fa-info-circle antimicrobial-doses__table-cells-help-icon" aria-hidden="true" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="bottom" data-content="@(Html.Raw(localizer["DDD is the assumed average maintenance dose per day for a drug used for its main indication in adults weighing 70 kg."]))"></i>
+                  </th>
+
+                  <th class="antimicrobial-doses__table-cells-header">
+                      DOT
+                      <i class="fa fa-info-circle antimicrobial-doses__table-cells-help-icon" aria-hidden="true" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="bottom" data-content="@(Html.Raw(localizer["DOT is the the number of days that a patient is on an antibiotic, regardless of dose"]))"></i>
+                  </th>
+              </tr>
+          </thead>
+            <tbody></tbody>            
+        </table>
+        </div>
+</body>
+</html>
